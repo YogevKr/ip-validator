@@ -11,7 +11,7 @@ def validation(ip: str, gateway: str, mask: str):
     try:
         ip_ = ipaddress.IPv4Address(ip)
         if ip_ not in ipaddress.IPv4Network(f"{gateway}/{mask}", False).hosts():
-            st.write("Error: IP not in range")
+            st.header("Error: IP not in range")
         else:
             if not ip_.is_private:
                 st.header("Warning! This ip is not in a standard private range.")

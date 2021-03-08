@@ -38,5 +38,7 @@ if st.button("Validate"):
         st.write("Please fill a Gateway address")
     elif mask == MASK_PLACEHOLDER:
         st.write("Please fill a mask")
+    elif ip == gateway:
+        st.write("IP and Mask should be different!")
     else:
         validation(ip, gateway, mask)

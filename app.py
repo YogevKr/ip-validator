@@ -17,10 +17,10 @@ def validation(ip: str, gateway: str, mask: str):
                 st.warning("Warning! This ip is not in a standard private range.")
 
             text = f"""
-            Valid
-            
-            IP address: {ip}
-            Mask: {mask}
+            Valid\n
+            \n
+            IP address: {ip}\n
+            Mask: {mask}\n
             Gateway: {gateway}
             """
 

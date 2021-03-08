@@ -16,7 +16,7 @@ def validation(ip: str, gateway: str, mask: str):
             if not ip_.is_private:
                 st.warning("Warning! This ip is not in a standard private range.")
 
-            st.subheader("Valid.")
+            st.success("Valid")
             st.write("IP address:", ip)
             st.write("Mask:", mask)
             st.write("Gateway:", gateway)

@@ -35,10 +35,10 @@ gateway = st.text_input("Gateway", value=GATEWAY_PLACEHOLDER)
 if st.button("Validate"):
     if ip == IP_PLACEHOLDER:
         st.error("Please fill an IP address")
-    elif gateway == GATEWAY_PLACEHOLDER:
-        st.error("Please fill a Gateway address")
     elif mask == MASK_PLACEHOLDER:
         st.error("Please fill a mask")
+    elif gateway == GATEWAY_PLACEHOLDER:
+        st.error("Please fill a Gateway address")
     elif ip == gateway:
         st.error("IP and Mask should be different!")
     else:

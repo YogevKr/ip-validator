@@ -22,7 +22,8 @@ def validation(ip: str, gateway: str, mask: str):
             st.write("Gateway:", gateway)
 
     except Exception as e:
-        st.write(e)
+        st.error(e)
+        st.stop()
 
 
 st.title("IP validator")

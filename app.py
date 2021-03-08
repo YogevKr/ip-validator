@@ -18,8 +18,8 @@ def validation(ip: str, gateway: str, mask: str):
 
             st.subheader("Valid.")
             st.write("IP address:", ip)
-            st.write("Gateway:", gateway)
             st.write("Mask:", mask)
+            st.write("Gateway:", gateway)
 
     except Exception as e:
         st.write(e)
@@ -28,8 +28,8 @@ def validation(ip: str, gateway: str, mask: str):
 st.title("IP validator")
 
 ip = st.text_input("IP address", value=IP_PLACEHOLDER)
-gateway = st.text_input("Gateway", value=GATEWAY_PLACEHOLDER)
 mask = st.text_input("Mask", value=GATEWAY_PLACEHOLDER)
+gateway = st.text_input("Gateway", value=GATEWAY_PLACEHOLDER)
 
 if st.button("Validate"):
     if ip == IP_PLACEHOLDER:

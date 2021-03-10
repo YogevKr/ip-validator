@@ -34,7 +34,7 @@ def validation(ip: str, gateway: str, mask: str):
 st.title("IP validator")
 
 ip = st.text_input("IP address", value=IP_PLACEHOLDER)
-mask = st.text_input("Mask", value=GATEWAY_PLACEHOLDER)
+mask = st.text_input("Netmask", value=GATEWAY_PLACEHOLDER)
 gateway = st.text_input("Gateway", value=GATEWAY_PLACEHOLDER)
 
 if st.button("Validate"):

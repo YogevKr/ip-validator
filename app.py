@@ -10,11 +10,11 @@ MASK_PLACEHOLDER = "XXX.XXX.XXX.XXX"
 def validation(ip: str, gateway: str, mask: str):
     try:
         ip_ = ipaddress.IPv4Address(ip)
+        if not ip_.is_private:
+            st.warning("Warning! This ip is not in a standard private range.")
         if ip_ not in ipaddress.IPv4Network(f"{gateway}/{mask}", False).hosts():
             st.error("Error: IP is not in range")
         else:
-            if not ip_.is_private:
-                st.warning("Warning! This ip is not in a standard private range.")
 
             text = f"""
             Valid\n
